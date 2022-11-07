@@ -1,0 +1,93 @@
+$typography-break-1: 500px;
+$typography-break-2: 800px;
+
+.typography {
+  > * {
+    margin-top: 0.5em;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+h1, h2, h3,
+.visually-h1, .visually-h2, .visually-h3 {
+  font-weight: 400;
+}
+
+h1,
+.visually-h1 {
+  font-size: 48px;
+  @media (max-width: $typography-break-2) {
+    font-size: 42px;
+  }
+  @media (max-width: $typography-break-1) {
+    font-size: 36px;
+  }
+}
+
+h2,
+.visually-h2 {
+  font-size: 32px;
+  @media (max-width: $typography-break-2) {
+    font-size: 28px;
+  }
+  @media (max-width: $typography-break-1) {
+    font-size: 24px;
+  }
+}
+
+h3,
+.visually-h3 {
+  font-size: 22px;
+}
+
+p {
+  font-family: "Zilla Slab", serif;
+  font-weight: 400;
+  line-height: 1.35;
+  font-size: 22px;
+  @media (max-width: $typography-break-2) {
+    font-size: 20px;
+  }
+  @media (max-width: $typography-break-1) {
+    font-size: 18px;
+  }
+}
+
+button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: var(--button-color);
+  background-color: var(--button-background-color);
+  font-family: 'Zilla Slab', serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  transition: background-color 300ms;
+  &:focus,
+  &:hover {
+    background-color: var(--button-background-color-hover);
+  }
+}
+
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 300ms;
+  &:hover {
+    color: var(--link-color-hover);
+  }
+}

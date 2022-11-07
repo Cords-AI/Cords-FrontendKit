@@ -1,0 +1,26 @@
+.v-field--focused {
+  .v-field__outline {
+    color: var(--mc-2022-link-color);
+  }
+}
+
+.v-input__details {
+  font-weight: bold;
+  color: var(--mentor-red);
+  text-align: left;
+}
+
+.v-text-field {
+  .v-field {
+    background-color: #ffffff;
+    .v-field__outline__start {
+      border-radius: 4px 0 0 4px;
+    }
+    .v-field__outline__end {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+  .v-input__details {
+    padding-inline-start: 0;
+  }
+}
