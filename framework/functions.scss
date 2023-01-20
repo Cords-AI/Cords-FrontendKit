@@ -1,0 +1,17 @@
+@function font-scale($pow, $var: "--typography-base-font-size") {
+  $s: "";
+  $op: "*";
+  @if $pow < 0 {
+    $op: "/";
+    $pow: $pow * -1;
+  }
+  @for $i from 0 to $pow {
+    $s: $s + " #{$op} var(--typography-scale-ratio)";
+  }
+  $result: calc(var(#{$var})#{$s});
+  @return $result;
+}
+
+@function hexToRGBString($hexColor) {
+  @return "#{red($hexColor)} #{green($hexColor)} #{blue($hexColor)}";
+}

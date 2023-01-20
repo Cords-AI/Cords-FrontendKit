@@ -7,12 +7,19 @@ export default class RouteBuilder {
 
   private isPaginated: boolean = false;
 
+  private _name: string;
+
   private route: any = {
     meta: {},
   };
 
   path(route): RouteBuilder {
     this.route.path = route;
+    return this;
+  }
+
+  name(name): RouteBuilder {
+    this._name = name;
     return this;
   }
 
@@ -60,6 +67,9 @@ export default class RouteBuilder {
     const result = [];
     const route = { ...this.route };
     if (langCode) route.path = `/${langCode}${route.path}`;
+    if (this._name) {
+      route.name = `${this._name}-${langCode}`;
+    }
     result.push(route);
 
     if (this.isPaginated) {

@@ -1,0 +1,16 @@
+[data-css-scope="quasar"] {
+
+  $input-text-color: rgb(35 42 47 / 1);
+  $input-label-color: rgb(76 92 103 / 0.6);
+  $input-label-color-floating: rgb(76 92 103 / 0.8);
+
+  --input-text-color: #{$input-text-color};
+  --input-label-color: #{$input-label-color};
+  --input-label-color-floating: #{$input-label-color-floating};
+
+  @import './src/css/index.sass';
+}
+[data-css-scope="quasar"] {
+  --q-primary: var(--quasar-primary);
+  --q-negative: var(--quasar-negative);
+}

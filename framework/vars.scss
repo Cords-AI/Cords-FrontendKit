@@ -1,7 +1,71 @@
+$off-black-color: #00040d;
+
 :root {
-  --body-color: #21212;
-  --primary-color: #0072ce;
-  --primary-dark-color: #000051;
-  --link-color: #41b6e6;
-  --link-color-hover: #da4432;
+
+  --steel-color: #6b7b99;
+  --slate-color: #475266;
+  --charcoal-color: #242933;
+  --off-white-color: #f7f9fc;
+  --off-white-emphasis-color: #ebeff5;
+
+  --off-black-color-rgb: #{hexToRGBString($off-black-color)};
+  --off-black-color: rgb(var(--off-black-color-rgb));
+  --hairline-color: #e6eaf2;
+
+  --blue-color: #0055ff;
+  --blue-dark-color: #0044cc;
+  --red-color: #da4432;
+
+  --quasar-primary: var(--blue-color);
+  --quasar-negative: var(--red-color);
+
+  --elevation-1: #fff;
+  --elevation-2: var(--off-white-color);
+  --elevation-3: var(--off-white-emphasis-color);
+
+  --body-color: var(--slate-color);
+  --body-background-color: var(--elevation-1);
+
+
+  --link-color: var(--blue-color);
+  --link-color-hover: var(--blue-dark-color);
+
+  --layout-padding: min(40px, 5vw);
+
+  --header-height: 64px;
+  --footer-height: 30px;
+
+  --typography-font-family: "Inter Variable Cords", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  --typography-base-font-size: 1rem;
+  --typography-scale-ratio: 1.25;
+  --typography-strong-font-weight: 550;
+  --typography-regular-font-weight: 450;
+  --typography-heading-font-weight: var(--typography-strong-font-weight);
+  --typography-copy-font-weight: var(--typography-regular-font-weight);
+
+  --typography-heading-color: var(--charcoal-color);
+  --typography-copy-color: var(--slate-color);
+  --typography-strong-color: var(--charcoal-color);
+}
+
+:root.theme-dark {
+  --elevation-1: #212326;
+  --elevation-2: #1c1f21;
+  --elevation-3: #181a1c;
+
+  --body-color: #b8becc;
+
+  --typography-heading-color: #fff;
+  --typography-copy-color: #b8becc;
+  --typography-strong-color: #fff;
+  --hairline-color: #393c40;
+  --blue-color: #5990ff;
+  --blue-dark-color: #4981f2;
+}
+
+:root {
+  --search-input-shadow-opacity: 0.08;
+  &.theme-dark {
+    --search-input-shadow-opacity: 0.22;
+  }
 }
