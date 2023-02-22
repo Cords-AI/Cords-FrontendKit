@@ -1,4 +1,4 @@
-import i18n from '../../locale/i18n';
+import i18n from "src/locale/i18n";
 
 export default class RouteBuilder {
   public static langCodes: string[] = [];

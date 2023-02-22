@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { onMounted } from 'vue';
-import i18n from '../../../locale/i18n';
+import i18n from '../../../../src/locale/i18n';
 
 onMounted(() => {
   document.body.classList.remove('loading');
