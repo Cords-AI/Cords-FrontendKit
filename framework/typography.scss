@@ -79,7 +79,12 @@ h5, .visually-h5 {
 h6, .visually-h6 {
   font-size: var(--h6-font-size);
 }
-
+p, .visually-p {
+  font-size: var(--typography-base-font-size);
+  font-weight: var(--typography-copy-font-weight);
+  color: var(--typography-copy-color);
+  line-height: 1.35;
+}
 a {
   font-weight: var(--typography-strong-font-weight);
   color: var(--link-color);

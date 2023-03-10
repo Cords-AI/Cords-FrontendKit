@@ -15,6 +15,7 @@ $off-black-color: #00040d;
   --blue-color: #0055ff;
   --blue-dark-color: #0044cc;
   --red-color: #da4432;
+  --warning-color: #947000;
 
   --quasar-primary: var(--blue-color);
   --quasar-negative: var(--red-color);
@@ -46,6 +47,10 @@ $off-black-color: #00040d;
   --typography-heading-color: var(--charcoal-color);
   --typography-copy-color: var(--slate-color);
   --typography-strong-color: var(--charcoal-color);
+
+  --map-container-background: #abd4ff;
+  --map-overlay-fill: #abd4ff;
+  --map-overlay-stroke: #d6eaff;
 }
 
 :root.theme-dark {
@@ -54,6 +59,7 @@ $off-black-color: #00040d;
   --elevation-3: #181a1c;
 
   --body-color: #b8becc;
+  --steel-color: #606b80;
 
   --typography-heading-color: #fff;
   --typography-copy-color: #b8becc;
@@ -61,11 +67,18 @@ $off-black-color: #00040d;
   --hairline-color: #393c40;
   --blue-color: #5990ff;
   --blue-dark-color: #4981f2;
+  --warning-color: #ffcc33;
+
+  --map-container-background: #162440;
+  --map-overlay-fill: #162440;
+  --map-overlay-stroke: #334c7d;
 }
 
 :root {
+  --shadow-opacity: 0.08;
   --search-input-shadow-opacity: 0.08;
   &.theme-dark {
+    --shadow-opacity: 0.22;
     --search-input-shadow-opacity: 0.22;
   }
 }
