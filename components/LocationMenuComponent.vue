@@ -89,7 +89,7 @@ const awaitingPreciseLocation = inject('awaitingPreciseLocation');
 const toggle = () => menuRef.value.toggle();
 
 const locationPrimary = computed(() => {
-  return info.value.city[getLocale()] ?? `${i18n.global.t('location')}`;
+  return info.value.city[getLocale()] ?? i18n.global.t('location');
 })
 
 const locationSecondary = computed(() => {
