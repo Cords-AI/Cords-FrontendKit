@@ -35,6 +35,7 @@ $off-black-color: #00040d;
 
   --header-height: 64px;
   --footer-height: 30px;
+  --main-height: calc(100vh - var(--header-height) - var(--footer-height));
 
   --typography-font-family: "Inter Variable Cords", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   --typography-base-font-size: 1rem;
