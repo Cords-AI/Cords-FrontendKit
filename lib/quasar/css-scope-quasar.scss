@@ -8,6 +8,13 @@
   --input-label-color: #{$input-label-color};
   --input-label-color-floating: #{$input-label-color-floating};
 
+  .text-subdued {
+    color: var(--typography-copy-color) !important;
+  }
+  .bg-subdued {
+    background: var(--subdued-color) !important;
+  }
+
   @import './src/css/index.sass';
 }
 [data-css-scope="quasar"] {

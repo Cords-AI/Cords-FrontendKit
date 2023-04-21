@@ -7,6 +7,7 @@ $off-black-color: #00040d;
   --charcoal-color: #242933;
   --off-white-color: #f7f9fc;
   --off-white-emphasis-color: #ebeff5;
+  --subdued-color: #ebeff5;
 
   --off-black-color-rgb: #{hexToRGBString($off-black-color)};
   --off-black-color: rgb(var(--off-black-color-rgb));
@@ -61,6 +62,7 @@ $off-black-color: #00040d;
 
   --body-color: #b8becc;
   --steel-color: #606b80;
+  --subdued-color: #31353c;
 
   --typography-heading-color: #fff;
   --typography-copy-color: #b8becc;
