@@ -11,12 +11,16 @@ $off-black-color: #00040d;
 
   --off-black-color-rgb: #{hexToRGBString($off-black-color)};
   --off-black-color: rgb(var(--off-black-color-rgb));
-  --hairline-color: #e6eaf2;
+  --hairline-color-hsl: 220 32% 93%;
+  --hairline-color: hsl(var(--hairline-color-hsl));
+  --hairline-subdued-color: hsl(var(--hairline-color-hsl) / 0.6);
 
   --blue-color: #0055ff;
   --blue-dark-color: #0044cc;
+  --blue-active-color: #0044cc;
   --red-color: #da4432;
   --warning-color: #ed9600;
+  --positive-color: #009973;
 
   --quasar-primary: var(--blue-color);
   --quasar-negative: var(--red-color);
@@ -67,10 +71,13 @@ $off-black-color: #00040d;
   --typography-heading-color: #fff;
   --typography-copy-color: #b8becc;
   --typography-strong-color: #fff;
-  --hairline-color: #393c40;
+  --hairline-color-hsl: 214 6% 24%;
+  --hairline-subdued-color: hsl(var(--hairline-color-hsl) / 0.4);
   --blue-color: #5990ff;
-  --blue-dark-color: #4981f2;
+  --blue-dark-color: #2e6ff2;
+  --blue-active-color: #8ab1ff;
   --warning-color: #ffcc33;
+  --positive-color: #2ee5b8;
 
   --map-container-background: #162440;
   --map-overlay-fill: #162440;
