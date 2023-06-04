@@ -12,7 +12,8 @@ $typography-break-2: 800px;
 
 .typography {
   > * {
-    margin-top: 1em;
+    --_spacing: var(--spacing, 1em);
+    margin-top: var(--_spacing);
     &:first-child {
       margin-top: 0;
     }
@@ -35,9 +36,10 @@ $typography-break-2: 800px;
     font-weight: var(--typography-copy-font-weight);
     padding-left: 1em;
     li {
-      margin-bottom: 0.5em;
-      &:last-child {
-        margin-bottom: 0;
+      --_list-spacing: var(--list-spacing, 0.5em);
+      margin-top: var(--_list-spacing);
+      &:first-child {
+        margin-top: 0;
       }
     }
   }
