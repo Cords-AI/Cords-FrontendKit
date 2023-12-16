@@ -1,5 +1,12 @@
 <template>
   <div ref="menuRef" class="menu-component">
+    <div class="menu-toggle" @click="toggle" v-if="showToggle">
+      <slot name="toggle">
+        <svg class="menu-default-toggle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" xml:space="preserve">
+          <path d="M12,20c-0.6,0-1-0.2-1.4-0.6C10.2,19,10,18.6,10,18s0.2-1,0.6-1.4C11,16.2,11.4,16,12,16s1,0.2,1.4,0.6C13.8,17,14,17.4,14,18s-0.2,1-0.6,1.4C13,19.8,12.6,20,12,20z M12,14c-0.6,0-1-0.2-1.4-0.6C10.2,13,10,12.6,10,12s0.2-1,0.6-1.4C11,10.2,11.4,10,12,10s1,0.2,1.4,0.6C13.8,11,14,11.4,14,12s-0.2,1-0.6,1.4C13,13.8,12.6,14,12,14z M12,8c-0.6,0-1-0.2-1.4-0.6C10.2,7,10,6.5,10,6s0.2-1,0.6-1.4C11,4.2,11.4,4,12,4s1,0.2,1.4,0.6C13.8,5,14,5.5,14,6s-0.2,1-0.6,1.4C13,7.8,12.6,8,12,8z"/>
+        </svg>
+      </slot>
+    </div>
     <Transition>
       <div class="menu-list noselect"
            :data-align-x="props.alignX"
@@ -22,12 +29,14 @@ interface Props {
   alignX?: string,
   alignY?: string,
   offset?: any,
+  showToggle?: boolean,
 }
 
 const props = withDefaults(defineProps<Props>(), {
   alignX: 'left',
   alignY: 'top',
   offset: [0, 10],
+  showToggle: false
 })
 
 const offsetX = `${props.offset[0]}px`;
@@ -74,6 +83,8 @@ const hide = () => {
   open.value = false;
   emit('hide');
 }
+
+provide('hide', hide);
 
 defineExpose({
   show,
