@@ -38,11 +38,12 @@ const onClick = () => {
   align-items: center;
   gap: 10px;
   height: 36px;
-  // padding: 0 20px;
   transition: background-color 300ms;
   cursor: pointer;
-  &:hover {
-    background-color: rgb(var(--link-color-rgb) / 0.1);
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgb(var(--link-color-rgb) / 0.1);
+    }
   }
 }
 .menu-list-item-icon {

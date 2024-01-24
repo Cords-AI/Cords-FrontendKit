@@ -91,7 +91,9 @@ a {
   font-weight: var(--typography-strong-font-weight);
   color: var(--link-color);
   text-decoration: none;
-  &:hover {
-    color: var(--link-color-hover);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--link-color-hover);
+    }
   }
 }
