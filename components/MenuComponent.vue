@@ -100,7 +100,7 @@ defineExpose({
   .menu-list {
     position: absolute;
     z-index: 1;
-    padding: 10px 0;
+    padding: var(--menu-padding, 10px 0);
     width: var(--menu-width, 200px);
     background: var(--elevation-1);
     border-radius: 8px;
