@@ -41,7 +41,12 @@ $off-black-color: #00040d;
   --body-height: 100svh;
   --header-height: 64px;
   --footer-height: 30px;
+  --footer-display: flex;
   --main-height: calc(var(--body-height) - var(--header-height) - var(--footer-height));
+  @media (max-width: 600px), (max-height: 750px) {
+    --footer-height: 0px;
+    --footer-display: none;
+  }
 
   --typography-font-family: "Inter Variable Cords", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   --typography-base-font-size: 1rem;
